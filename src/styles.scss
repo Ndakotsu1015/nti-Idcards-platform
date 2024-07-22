@@ -1,0 +1,109 @@
+/* You can add global styles to this file, and also import other style files */
+
+$gutter: 1rem; //for primeflex grid system
+@import "assets/layout/styles/layout/layout.scss";
+
+/* PrimeNG */
+@import "../node_modules/primeng/resources/primeng.min.css";
+@import "../node_modules/primeflex/primeflex.scss";
+@import "../node_modules/primeicons/primeicons.css";
+
+/* Demos */
+@import "assets/demo/styles/flags/flags.css";
+@import "assets/demo/styles/badges.scss";
+@import "assets/demo/styles/code.scss";
+
+.card-container,
+.card-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+    width: 100vw;
+    /* Full viewport width */
+    margin: 0;
+    padding: 0;
+}
+
+.card-details {
+    background-image: url('assets/demo/images/idcard-bg.jpeg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px !important;
+    width: 400px !important;
+    text-align: center !important;
+}
+
+@media print {
+    @page {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    body,
+    .content,
+    html,
+    .app-bg {
+        background-color: white !important;
+    }
+
+    // .minus-top-margin {
+    //     height: 1600px !important;
+    //     width: 1600px !important;
+    // }
+
+    .card-details {
+        height: 1000px !important;
+        width: 1000px !important;
+        // margin-top: -20px !important;
+        // margin-left: -120px !important;
+    }
+
+    .card-body {
+        margin-top: -10px !important;
+        margin-left: -100px !important;
+        // padding: -100px !important;
+    }
+
+    body {
+        font-size: 8pt !important;
+        /* Adjust font size for better readability */
+        line-height: 1.5 !important;
+        /* Adjust line height for better readability */
+        margin-top: -60px !important;
+        // margin-left: -10px !important;
+        // margin-right: -10px !important;
+    }
+
+    .shadow-1,
+    .shadow-2,
+    .shadow-3,
+    .shadow-4,
+    .shadow-5,
+    .shadow-6,
+    .shadow-7,
+    .shadow-8,
+    .border-round,
+    .surface-section,
+    .surface-border {
+        display: default !important;
+    }
+
+    .hide-on-print {
+        display: none !important;
+    }
+
+    .full-screen {
+        width: 100% !important;
+        /* Set width to 100% for print */
+        // height: 100% !important;
+    }
+
+    .print-section {
+        max-width: 100% !important;
+        height: 100% !important;
+        flex: 0 0 100%;
+    }
+}
